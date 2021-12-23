@@ -1,0 +1,18 @@
+- name: Link .gitconfig
+  file:
+    src: "{{ role_path }}/files/.gitconfig"
+    dest: ~/.gitconfig
+    state: link
+    force: yes
+
+- name: Link .gitignore
+  file:
+    src: "{{ role_path }}/files/.gitignore"
+    dest: ~/.gitignore
+    state: link
+
+- name: Link .tmux.conf
+  file:
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: ~/.tmux.conf
+    state: link

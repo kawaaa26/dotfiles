@@ -1,0 +1,21 @@
+# list the tools up installed via homebrew
+# check application avaliability on the below link,
+# https://formulae.brew.sh/formula/
+
+brew_taps:
+  - homebrew/core
+brew_packages:
+  - fzf
+  - ghq
+  - gibo
+  - go
+  - jq
+  - neovim
+  - rust
+  - rustup
+  - tig
+  - tmux
+  - wget
+  - yarn
+  - cpanminus
+  - commitizen

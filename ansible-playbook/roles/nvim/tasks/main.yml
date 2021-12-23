@@ -1,0 +1,17 @@
+- name: Make nvim config directory
+  file:
+    path: ~/.config
+    state: directory
+
+- name: link nvim configuration files and directories
+  file:
+    src: "{{ role_path }}/files"
+    dest: "{{ config_dir }}"
+    state: link
+    force: yes
+
+# - name: link nvim configuration directories
+#   file:
+#     src: "{{ role_path }}/files/rc"
+#     path: ~/.config/nvim
+#     state: directory

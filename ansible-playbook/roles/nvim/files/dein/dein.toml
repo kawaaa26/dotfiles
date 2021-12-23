@@ -1,0 +1,197 @@
+[[plugins]] # dein.vim
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # faster j,k
+repo = 'rhysd/accelerated-jk'
+
+[[plugins]] # NERDTree
+repo = 'scrooloose/nerdtree'
+hook_add = "source ${ANSIBLE_NVIM}/plug_config/nerdtree.vim"
+
+[[plugins]] # visualize indentations
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]] # file icons
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]] # cheat sheet
+repo = 'reireias/vim-cheatsheet'
+
+[[plugins]] # status bar customization
+repo = 'vim-airline/vim-airline'
+hook_add = "source ${ANSIBLE_NVIM}/plug_config/vim-airline.vim"
+
+[[plugins]] # vim-airline color scheme plugin.
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]] # tmnuxline
+repo = 'edkolev/tmuxline.vim'
+hook_add = "source ${ANSIBLE_NVIM}/plug_config/tmuxline.vim"
+
+[[plugins]]
+repo = 'w0rp/ale'
+on_cmd = ['ALELint', 'ALEToggle', 'ALEEnable', 'ALEToggleBuffer', 'ALEEnableBuffer']
+
+[[plugins]] # display git diff
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]] # faster Unite.vim
+repo = 'Shougo/denite.nvim'
+# on_cmd = 'Denite'
+# if = 'has("nvim")'
+hook_add = "source ${ANSIBLE_NVIM}/userautoload/plugins/plugins-denite.vim"
+
+[[plugins]] # vim setting for Rails
+repo = 'tpope/vim-rails'
+
+[[plugins]] # highlight spaces
+repo = 'bronson/vim-trailing-whitespace'
+
+# # --------------------------------------------------------
+# # color settings
+# # --------------------------------------------------------
+
+[[plugins]]
+# # repo = 'Rigellute/rigel' # clear view.
+# repo = 'fcpg/vim-orbital'
+repo = 'folke/tokyonight.nvim'
+# # repo = 'ayoola-moore/vim-colokschi'
+# # repo = 'altercation/vim-colors-solarized'
+
+
+# # repo = 'liuchengxu/space-vim-dark' # well-designed dark theme
+# # repo = 'tomasr/molokai'
+# # repo = 'baines/vim-colorscheme-thaumaturge'
+# # repo = 'preocanin/greenwint'
+# # repo = 'encody/nvim' #colorscheme(lyla)
+# # repo = 'vim-scripts/dante.vim' #(dante)
+# # repo = 'RussellBradley/vim-warriors-away' #(vim-warriors-away)
+# # repo = 'HenryNewcomer/vim-theme-papaya'
+# # repo = 'wolf-dog/nighted.vim'
+# # repo = 'fenetikm/falcon'
+# # repo = 'icymind/NeoSolarized'
+# # repo = 'sfi0zy/atlantic-dark.vim' # well CursorLineNr theme
+# # repo = 'loshjawrence/magicka.vim'
+# # repo = 'agreco/vim-citylights' # compatible with alacritty blue theme
+# # repo = 'relastle/bluewery.vim' # 🍺 Blue-based vim colorscheme
+# # repo = 'cjgajard/patagonia-vim'
+
+# # --------------------------------------------------------
+
+[[plugins]] # references
+repo = 'thinca/vim-ref'
+
+[[plugins]] # yank option
+repo = 'Shougo/neoyank.vim'
+on_path = '.*'
+on_i = 1
+
+[[plugins]] # beautiful positioning for spaces
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]] # syntax highlight for every language
+repo = 'sheerun/vim-polyglot'
+
+# # [[plugins]] # fontpatcher for powerline
+# # repo = 'Lokaltog/powerline-fontpatcher'
+
+[[plugins]] # highlight local variables.
+repo = 'todesking/ruby_hl_lvar.vim'
+
+[[plugins]] # Unite file_mru setting. show recent file history
+repo = 'Shougo/neomru.vim'
+
+[[plugins]] # Git wrapper
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # Displays function signatures from completions in the command line
+repo = 'Shougo/echodoc.vim'
+
+[[plugins]] # easier comment
+repo = 'scrooloose/nerdcommenter'
+hook_add = "source ${ANSIBLE_NVIM}/plug_config/nerdcommenter.vim"
+
+[[plugins]] #  Tern-based JavaScript editing support
+repo = 'ternjs/tern_for_vim'
+
+[[plugins]] # JScoding plugin
+repo = 'billyvg/tigris.nvim'
+on_ft = ['javascript', 'javascript.jsx']
+hook_post_update = '''
+  let g:dein#plugin.build = './install.sh'
+'''
+hook_add = '''
+  let g:tigris#enabled = 1
+  let g:tigris#on_the_fly_enabled = 1
+  let g:tigris#delay = 300
+'''
+
+[[plugins]] # faster HTML coding
+repo = 'mattn/emmet-vim'
+
+[[plugins]] # Show Star Wars Episodes
+repo = 'mattn/vim-starwars'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]] # vim window resizing
+repo = 'simeji/winresizer'
+
+[[plugins]] # vim markdown preview
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md', 'markdown']
+
+[[plugins]] # recover sessions for vim and tmux
+repo = 'tpope/vim-obsession'
+
+[[plugins]] # Dark powered shell insterface
+repo = 'Shougo/deol.nvim'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]] # strong completion
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_source = 'ale'
+build = './install.sh nightly'
+merged = '0'
+hook_add = 'source ${ANSIBLE_NVIM}/plug_config/coc.rc.vim'
+hook_source = 'call coil398#init#coc#hook_source()'
+
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# rev = 'release'
+# on_i = 1
+# merged = '0'
+# hook_source = 'call coil398#init#coc#hook_source()'
+
+# [[plugins]] # Running t-rex on vim window
+# repo = 'mattn/vim-trex'
+
+[[plugins]] #rust document
+repo = 'rhysd/rust-doc.vim'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_source = '''
+    let g:rustfmt_autosave = 1
+    let g:rust_doc#define_map_K = 0
+'''
+
+[[plugins]] #swift plugin
+repo = 'keith/swift.vim'
+
+[[plugins]]
+repo='Manu-sh/NeonVimColorscheme'
+
+[[plugins]] # syntax highligt extra color scheme
+repo='justinmk/vim-syntax-extra'
+
+[[plugins]]
+repo='alec-gibson/nvim-tetris'
+
+[[plugins]]
+repo='ap/vim-css-color'

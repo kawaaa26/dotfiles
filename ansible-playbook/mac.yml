@@ -1,0 +1,11 @@
+- hosts: localhost
+  connection: local
+  roles: # directories contained in roles.
+    - role: alacritty
+    - role: homebrew
+    - role: homebrew_cask
+    - role: cli
+    - role: bash
+    - role: anyenv
+    - role: dotfiles
+    - role: nvim

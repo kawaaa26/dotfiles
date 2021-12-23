@@ -1,0 +1,6 @@
+- name: link .alacritty.yml
+  file:
+    src: "{{ role_path }}/files/.alacritty.yml"
+    dest: ~/.alacritty.yml
+    state: link
+    force: yes

@@ -1,0 +1,9 @@
+[user]
+	name = kawaaa26
+	email = unic.almj@yahoo.com
+
+[alias]
+    graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --date-order
+
+[ghq]
+	root = ~/source

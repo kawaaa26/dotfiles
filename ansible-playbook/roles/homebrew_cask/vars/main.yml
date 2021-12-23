@@ -1,0 +1,22 @@
+# list the tools up installed via homebrew --cask.
+# check application avaliability on the below link,
+# https://formulae.brew.sh/formula/
+
+brew_cask_apps:
+  - docker
+  - google-chrome
+  - google-japanese-ime
+  - visual-studio-code
+  - iterm2
+  - slack
+  - discord
+  - alacritty
+  - firefox
+  - zoom
+  - brave-browser
+  - notion
+  - clipy
+  - karabiner-elements
+  - typora
+  - boostnote
+  - jasper

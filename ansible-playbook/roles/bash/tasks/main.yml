@@ -1,0 +1,24 @@
+- name: Link .bash_profile
+  file:
+    src: "{{ role_path }}/files/.bash_profile"
+    dest: ~/.bash_profile
+    state: link
+    force: yes
+
+- name: Link .bashrc
+  file:
+    src: "{{ role_path }}/files/.bashrc"
+    dest: ~/.bashrc
+    state: link
+    force: yes
+
+- name: Make config directory
+  file:
+    path: ~/.config
+    state: directory
+
+- name: Link config files
+  file:
+    src: "{{ role_path }}/files"
+    dest: "{{ config_dir }}"
+    state: link
