@@ -257,6 +257,7 @@ alias TMload="tmux source-file ~/.tmux.conf"
 # alias moukaeru='sh ~/.scripts/gohome/moukaeru'
 # alias ohayo='sh ~/.scripts/gohome/ohayo'
 
+alias ansi="~/dotfiles/ansible-playbook/"
 alias ansi_dir="~/dotfiles/ansible-playbook"
 alias ansible_dir="~/dotfiles/ansible-playbook"
 alias bash_ansible="${ANSIBLE_BASH}"
