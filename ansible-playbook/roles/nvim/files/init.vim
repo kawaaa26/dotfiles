@@ -32,8 +32,8 @@ source ${ANSIBLE_NVIM}/rc/dein.vim
 " Virtualenv settings are updated due to installing anyenv.
 " let g:python_host_prog = $PYENV_ROOT.'/versions/neovim2/bin/python'
 " let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim3/bin/python'
-
-let g:python3_host_prog = expand('~/nvim-python3/bin/python3')
+let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | grep python3)/bin/python") || echo -n $(which python3)')
+" let g:python3_host_prog = expand('~/nvim-python3/bin/python3')
 let g:python_host_prog = expand('~/nvim-python2/bin/python2')
 
 "--------------------------------------------------------

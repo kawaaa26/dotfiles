@@ -44,3 +44,4 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 # export JAVA_HOME=`/usr/libexec/java_home`
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-12.0.2.jdk/Contents/Home
+export NODE_PATH=`npm root -g`

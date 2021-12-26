@@ -22,3 +22,70 @@
     src: "{{ role_path }}/files"
     dest: "{{ config_dir }}"
     state: link
+
+- name: bash existing check
+  stat:
+    path: "{{ bash_bin }}"
+  register: result
+
+- block:
+  # creating tmp dir as a dev directory
+  - name: create tmp dir
+    file:
+      path: "{{ tmp_dir }}"
+      state: directory
+      mode: 0755
+
+  # lownload source code and unarchive
+  - name: lownload bash {{ version }}
+    get_url:
+      url: "http://ftp.gnu.org/gnu/bash/bash-{{version}}.tar.gz"
+      dest: "{{ tmp_dir }}/bash-{{version}}.tar.gz"
+  - name: unarchive bash {{ version }}
+    command:
+      cmd: "tar -zxvf {{ tmp_dir }}/bash-{{version}}.tar.gz -C {{ tmp_dir }}/"
+
+  # パッチ適用
+  - block:
+      - name: download patches
+        get_url:
+          url: "http://ftp.gnu.org/gnu/bash/bash-{{version}}-patches/bash50-{{ item }}"
+          dest: "{{ tmp_dir }}/bash-{{ version }}"
+        with_items: "{{ patch_versions }}"
+      - name: apply patches
+        patch:
+          src: "{{ tmp_dir }}/bash-{{ version }}/bash50-{{ item }}"
+          basedir: "{{ tmp_dir }}/bash-{{ version }}"
+        with_items: "{{ patch_versions }}"
+    when: patch_versions is defined
+
+  # インストール
+  - name: configure
+    command:
+      chdir: "{{ tmp_dir }}/bash-{{ version }}"
+      cmd: ./configure
+  - name: make
+    make:
+      chdir: "{{ tmp_dir }}/bash-{{ version }}"
+    ignore_errors: true
+  - name: make install
+    make:
+      chdir: "{{ tmp_dir }}/bash-{{ version }}"
+      target: install
+    become: yes
+  # /etc/shells編集
+  - name: edit /etc/shells
+    lineinfile:
+      dest: /etc/shells
+      line: "{{ bash_bin }}"
+    become: yes
+  # デフォルトシェルの変更
+  - name: chsh
+    command:
+      "chsh -s {{ bash_bin }}"
+  # 作業用ファイル削除
+  - name: remove tmp dir
+    file:
+      state: absent
+      path: "{{ tmp_dir }}/"
+  when: result.stat.exists == False
