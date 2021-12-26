@@ -32,7 +32,7 @@ endif
 
 let g:airline_symbols.crypt = '🔒'		"暗号化されたファイル
 let g:airline_symbols.maxlinenr = " \uF6F6"
-let g:airline_symbols.branch = " \uF408  \uE725"
+let g:airline_symbols.branch = " \uF408  \uE725 \uE370"
 let g:airline_symbols.paste = 'ρ'			"ペーストモード
 let g:airline_symbols.spell = 'Ꞩ'			"スペルチェック
 let g:airline_symbols.notexists = '∄'		"git管理外
