@@ -8,9 +8,6 @@ repo = 'rhysd/accelerated-jk'
 repo = 'scrooloose/nerdtree'
 hook_add = "source ${ANSIBLE_NVIM}/plug_config/nerdtree.vim"
 
-[[plugins]] # visualize indentations
-repo = 'nathanaelkane/vim-indent-guides'
-
 [[plugins]] # file icons
 repo = 'ryanoasis/vim-devicons'
 
@@ -195,3 +192,9 @@ repo='alec-gibson/nvim-tetris'
 
 [[plugins]]
 repo='ap/vim-css-color'
+
+# [[plugins]] # visualize indentations
+# repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo='Yggdroot/indentLine'
