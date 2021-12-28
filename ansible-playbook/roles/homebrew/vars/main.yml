@@ -18,4 +18,5 @@ brew_packages:
   - wget
   - yarn
   - cpanminus
-  - commitizen
+  - pyenv-virtualenv
+  # - commitizen
