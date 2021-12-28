@@ -38,7 +38,7 @@ battery=$(estimate_battery)
 arch=`uname -m`
 
 export PS1='
-\[\e[37;43m\]  \t \[\e[0m\]\[\e[33;41m\] \[\e[0m\]\[\e[37;41m\]   $arch  \[\e[31;45m\]\[\e[0m\]\[\e[37;45m\]   \w  \[\e[35;40m\]\[\e[0m\]
+\[\e[37;43m\]  \t \[\e[0m\]\[\e[33;41m\] \[\e[0m\]\[\e[37;41m\]   $arch   \[\e[31;45m\]\[\e[0m\]\[\e[37;45m\]   \w  \[\e[35;40m\]\[\e[0m\]
 \[\e[1;31m\]- ❱\[\e[1;37m\]❱\[\e[1;32;49m\]❱ \[\e[0m\]'
 
 # PROMPT_COMMAND="$PROMPT_COMMAND"$'\n'PS1
