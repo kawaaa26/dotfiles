@@ -1,0 +1,12 @@
+- name: link .tmux.conf
+  file:
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: ~/.tmux.conf
+    state: link
+
+- name: link tmux configuration files and directories
+  file:
+    src: "{{ role_path }}/files"
+    dest: "{{ config_dir }}"
+    state: link
+    force: yes

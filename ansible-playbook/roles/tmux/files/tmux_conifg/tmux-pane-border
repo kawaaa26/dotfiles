@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+if git_status=$(cd $1 && git status 2>/dev/null ); then
+  git_branch="$(echo $git_status| awk 'NR==1 {print $3}')"
+  case $git_status in
+    *Changes\ not\ staged* ) state="#[bg=blue,fg=black] ± #[fg=default]" ;;
+    *Changes\ to\ be\ committed* ) state="#[bg=blue,fg=black] + #[default]" ;;
+    * ) state="#[bg=green,fg=black] ✔ #[default]" ;;
+  esac
+  if [[ $git_branch = "master" ]]; then
+    git_info="#[underscore]#[bg=magenta,fg=white]   ${git_branch} ⭠ #[default]${state}"
+  else
+    git_info="#[underscore]#[bg=magenta,fg=white]⭠   ${git_branch}  #[default]${state}"
+  fi
+else
+  git_info=""
+fi
+# version_info=" #(ruby -v | cut -b 6-10) | ﯟ #(node -v | cut -b 2-10)"
+# directory="#[underscore]#[bg=magenta,fg=white] $version_info  $1#[default]"
+directory="#[underscore]#[bg=magenta,fg=white] $1#[default]"
+
+echo "$directory$git_info"
+# echo "$directory$git_info"
+
+    # *Changes\ not\ staged* ) state="#[bg=colour013,fg=black]   #[fg=default]" ;;
+    # *Changes\ not\ staged* ) state="#[bg=colour013,fg=black]  #[fg=default]" ;;
+    # *Changes\ not\ staged* ) state="#[bg=colour013,fg=black] ± #[fg=default]" ;;
+    # * ) state="#[bg=green,fg=black]  ✔ #[default]" ;;
+

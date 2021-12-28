@@ -9,3 +9,4 @@
     - role: anyenv
     - role: dotfiles
     - role: nvim
+    - role: tmux

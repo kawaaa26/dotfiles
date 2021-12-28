@@ -15,12 +15,16 @@ check_tmux=$(ps xj | grep tmuximum | grep -v grep | wc -l)
 
 # the below line is for using TMD alias.
 # if [ "$(echo $bash_process)" = "2" ] && [ "$(echo $check_tmux)" = "1" ] || [ "$(echo $bash_process)" = "3" ] && [ "$(echo $check_tmux)" = "1" ] ; then
-if [ "$(echo $bash_process)" = "2" ] && [ "$(echo $check_tmux)" = "1" ]; then
+if [ "$(echo $bash_process)" = "3" ] && [ "$(echo $check_tmux)" = "1" ]; then
   echo "Start loading tmuxline..."
   vim -c :q
   echo "tmuxline loading completed!"
 else
   echo "here's new pane"
+  # echo "--------------------"
+  # echo $bash_process
+  # echo "--------------------"
+  # echo $check_tmux
 fi
 
 # --------------------------------------------------------------------
