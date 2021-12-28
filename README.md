@@ -1,6 +1,5 @@
 # dotfiles
-<img src="https://img.shields.io/badge/-Ansible-EE0000.svg?logo=ansible&style=plastic">
-<img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
+<img src="https://img.shields.io/badge/-Ansible-EE0000.svg?logo=ansible&style=plastic"> <img src="https://img.shields.io/badge/-Vim-019733.svg?logo=vim&style=plastic">
 
 ## Setup
 ```bash
