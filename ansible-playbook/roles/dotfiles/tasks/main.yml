@@ -11,8 +11,8 @@
     dest: ~/.gitignore
     state: link
 
-- name: Link .tmux.conf
-  file:
-    src: "{{ role_path }}/files/.tmux.conf"
-    dest: ~/.tmux.conf
-    state: link
+# - name: Link .tmux.conf
+#   file:
+#     src: "{{ role_path }}/files/.tmux.conf"
+#     dest: ~/.tmux.conf
+#     state: link

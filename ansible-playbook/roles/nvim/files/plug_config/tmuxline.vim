@@ -12,10 +12,10 @@
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'b'    : ['#(whoami)'],
-      \'c'    : ['#(sh ~/dotfiles/tmux/get_current_mouse_mode.sh)'],
+      \'c'    : ['#(sh ~/.config/tmux/tmux_conifg/get_current_mouse_mode.sh)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : ['  #(sh ~/dotfiles/tmux/get_volume_tmux.sh)', '#(sh ~/dotfiles/tmux/get_ssid_tmux.sh)', '#(sh ~/dotfiles/tmux/get_battery_tmux.sh)'],
+      \'y'    : ['  #(sh ~/.config/tmux/tmux_conifg/get_volume_tmux.sh)', '#(sh ~/.config/tmux/tmux_conifg/get_ssid_tmux.sh)', '#(sh ~/.config/tmux/get_battery_tmux.sh)'],
       \'z'    : ['%R', '#(LANG=C date | cut -f 1 -d " ")', '%F']}
 
       " \'y'    : ['%R', '%a', '%m/%d', '%Y'],
