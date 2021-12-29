@@ -1,15 +1,25 @@
-" -------------------------------------------------------
+" ------------------------------------------------------
 " kazoo key-mapping
 "--------------------------------------------------------
 
+" jump to right or left with shift + H, L
+noremap <S-h> 0
+noremap <S-l> $
+
+" ESC with jjj in insert mode.
+inoremap <silent> jjj <ESC>
+
 " refresh vim window
-noremap qq <C-l>
+" nnoremap <C-l> <Nop>
+nnoremap qq <C-l>
 
 "next tab
-map <unique> <C-l> gt
+" nnoremap <unique> <C-l> gt
+nnoremap <unique> <S-Right> gt
 
 "previous tab
-map <unique> <C-h> gT
+" map <unique> <C-h> gT
+map <unique> <S-Left> gT
 
 "close tab
 map <unique> <C-w> sq
