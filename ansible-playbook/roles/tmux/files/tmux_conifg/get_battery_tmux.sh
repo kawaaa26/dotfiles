@@ -9,7 +9,7 @@ if battery_info=$(/usr/bin/pmset -g ps | awk '{ if (NR == 2) print $2 " " $3 }' 
   else
     battery="#[fg=black]$battery_quantity % "
   fi
-  echo $battery
+  echo $battery
 fi
 
 # the battery symbol somehow disppeared

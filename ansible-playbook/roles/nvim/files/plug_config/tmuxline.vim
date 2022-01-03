@@ -15,11 +15,12 @@ let g:tmuxline_preset = {
       \'c'    : ['#(sh ~/.config/tmux/tmux_conifg/get_current_mouse_mode.sh)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : ['  #(sh ~/.config/tmux/tmux_conifg/get_volume_tmux.sh)', '#(sh ~/.config/tmux/tmux_conifg/get_ssid_tmux.sh)', '#(sh ~/.config/tmux/get_battery_tmux.sh)'],
+      \'y'    : ['  #(sh ~/.config/tmux/tmux_conifg/get_volume_tmux.sh)', '#(sh ~/.config/tmux/tmux_conifg/get_ssid_tmux.sh)', '#(sh ~/.config/tmux/tmux_conifg/get_battery_tmux.sh)'],
       \'z'    : ['%R', '#(LANG=C date | cut -f 1 -d " ")', '%F']}
 
       " \'y'    : ['%R', '%a', '%m/%d', '%Y'],
       " \'y'    : [' #(sh ~/dotfiles/battery_percentage.sh) ', '%R', '%a', '%F'],
+      " \'y'    : ['  #(sh ~/.config/tmux/tmux_conifg/get_volume_tmux.sh)', '#(sh ~/.config/tmux/tmux_conifg/get_ssid_tmux.sh)', '#(sh ~/.config/tmux/get_battery_tmux.sh)'],
 
 let g:tmuxline_theme = 'luna'
 
