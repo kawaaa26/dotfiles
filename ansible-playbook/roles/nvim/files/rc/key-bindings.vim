@@ -7,7 +7,7 @@ noremap <S-h> 0
 noremap <S-l> $
 
 " ESC with jjj in insert mode.
-inoremap <silent> jjj <ESC>
+inoremap <silent> z <ESC>
 
 " refresh vim window
 " nnoremap <C-l> <Nop>
@@ -97,3 +97,9 @@ nnoremap :gd :Gdiff<CR> " git diff
 nnoremap :ga :Gwrite<CR> " git add
 nnoremap :gb :Gblame<CR> " git blame (showing which commit every single line belongs to.)
 nnoremap :gc :Gcommit<CR> " git commit
+
+" ---------------------------------------------
+" coc jumping to method defined file.
+" ---------------------------------------------
+
+nmap  gd (coc-definition)
