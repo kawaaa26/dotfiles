@@ -125,7 +125,9 @@
         #family: Hack Nerd Font
         style: Italic
   # Point size
-    size: 11.0
+    # size: 11.0 # default size
+    # size: 9.5 # smaller font without monitors
+    size: 10.0 # moderate size with monitors
 
 #font:
   # Normal (roman) font face
