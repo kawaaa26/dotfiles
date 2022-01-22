@@ -7,7 +7,7 @@ noremap <S-h> 0
 noremap <S-l> $
 
 " ESC with jjj in insert mode.
-inoremap <silent> z <ESC>
+inoremap <silent> <C-d> <ESC>
 
 " refresh vim window
 " nnoremap <C-l> <Nop>
