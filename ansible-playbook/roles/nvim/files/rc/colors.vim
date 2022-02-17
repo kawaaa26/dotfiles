@@ -7,7 +7,11 @@ autocmd ColorScheme * highlight CursorLine cterm=underline ctermbg=none ctermfg=
 " autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=9 ctermbg=none
 autocmd ColorScheme * highlight CursorColumn cterm=underline ctermbg=9 ctermfg=none
 autocmd ColorScheme * highlight Constant ctermfg=36 ctermbg=none
-autocmd ColorScheme * highlight Comment ctermfg=25 ctermbg=none
+" autocmd ColorScheme * highlight Comment ctermfg=25 ctermbg=none " default
+" comment color
+autocmd ColorScheme * highlight Comment ctermfg=201 ctermbg=none " vivid-purple comment
+" autocmd ColorScheme * highlight Comment ctermfg=214 ctermbg=none " yellow comment
+" autocmd ColorScheme * highlight Comment ctermfg=26 ctermbg=none " blue comment
 autocmd ColorScheme * highlight Folded ctermfg=235 ctermbg=none
 autocmd ColorScheme * highlight TabLine ctermfg=25 ctermbg=none
 autocmd ColorScheme * highlight Statement ctermfg=202 ctermbg=none "(if, @variables in Ruby)
